@@ -1,0 +1,96 @@
+li = []
+
+def inputd():
+    num=int(input("Enter data for a 1D array (seprated by spaces):"))
+    for i in range(num):
+        el=int(input(f"enter the element no.{i+1}:"))
+        li.append(el)
+def datas():
+    print("Data Summary:")
+    print("-Total elements :",len(li))
+    print("-Minmum value:",min(li))
+    print("-Maximum value:",max(li))
+    print("-sum of all values:",sum(li))
+    print("-average value:",sum(li)/len(li))
+ 
+
+def fact(a=1):
+    if a<=1:
+        return 1
+    return a*fact(a-1)
+
+def threshold():
+    num4=int(input("Enter a threshold value to filter out data above this value:"))
+    for i in li:
+        if i>=num4:
+            print(i)
+def multi():
+    print("-Minmum value:",min(li))
+    print("-Maximum value:",max(li))
+    print("-sum of all values:",sum(li))
+    print("-average value:",sum(li)/len(li))
+    
+while True:
+    print("Welcome to the Data Analyzer and Transformer program \n")
+    
+    print("Main menu:")
+    print("1. Input Data")
+    print("2. Display Data Summary (Built in Functions)")
+    print("3. Calculate Factorial (Recursion)")
+    print("4. Filter Data by Threshold (Lambda Function )")
+    print("5. Sort Data")
+    print("6. Display dataset ")
+    print("7. Exit Program")
+    
+    choice = int(input("Please enter your choice:"))
+    
+    if choice==1:
+        inputd()
+        print("Data has been stored successfully !\n")
+        
+    elif choice==2:
+        datas()
+        
+    elif choice==3:
+        num3=int(input("Enter a Number tp calculate its factorial:"))
+        result =fact(num3)
+        print(f"Factorial  of ",num3 ,"is:",result)
+        
+    elif choice==4:
+        threshold()
+        
+    elif choice==5:
+        choice=int(input("Choose sorting option:"))
+        if choice==1:
+            li.sort()
+            print("Sorted data in ascending order:",li)
+            
+        elif choice==2:
+            li.sort(reverse=True)
+            print("Sorted data in decending order:",li)
+            
+    elif choice==6:
+        multi()
+    elif choice==7:
+        print("thank you for using the data analyzer and transformer program. Goodbye!")
+        break
+
+    else:
+        print("thankyou")
+            
+     
+            
+              
+            
+        
+       
+    
+    
+       
+
+
+
+
+
+
+
